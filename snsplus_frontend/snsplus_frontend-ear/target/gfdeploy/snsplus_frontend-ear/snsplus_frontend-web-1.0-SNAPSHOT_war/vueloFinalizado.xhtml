@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/templatePrueba.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:define name="menu">
+        <p:menu style="height: 98%">
+            <p:menuitem value="Home" outcome="/indexPrueba"/>
+            <p:menuitem value="Configuración del Vuelo" outcome="/configuracionVuelo"/>
+            <p:menuitem value="Plan de Vuelo" outcome="/indexPrueba"/>
+            <p:menuitem value="Despegue" outcome="/indexPrueba"/>
+            <p:menuitem value="Aterrizaje" outcome="/indexPrueba"/>
+            <p:menuitem value="Cerrar Vuelo" outcome="/indexPrueba"/>
+        </p:menu>
+    </ui:define>
+    <ui:define name="content">
+        
+    </ui:define>
+</ui:composition>

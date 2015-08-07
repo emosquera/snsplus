@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="ItinerarioRuta" package="com.snsplus.backend.model" visibility="public" xPosition="1062.0" yPosition="237.0">
+      <Fields>
+        <Field name="ruta" type="Ruta" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDia" returnType="DiaSemana" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getRuta" returnType="Ruta" visibility="public"/>
+        <Method name="setRuta" returnType="void" visibility="public">
+          <Argument type="Ruta" name="ruta"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ValorIndicadorFase" package="com.snsplus.backend.model" visibility="public" xPosition="628.0" yPosition="1072.0">
+      <Fields>
+        <Field name="padre" type="FaseOperacion" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="FaseOperacion" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="FaseOperacion" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Evento" package="com.snsplus.backend.model" visibility="public" xPosition="1582.0" yPosition="1489.0">
+      <Fields>
+        <Field name="indicadores" type="List&lt;IndicadorEvento&gt;" visibility="private"/>
+        <Field name="operacion" type="Operacion" visibility="private"/>
+        <Field name="cargos" type="List&lt;Cargo&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getOperacion" returnType="Operacion" visibility="public"/>
+        <Method name="setOperacion" returnType="void" visibility="public">
+          <Argument type="Operacion" name="operacion"/>
+        </Method>
+        <Method name="getCargos" returnType="List&lt;Cargo&gt;" visibility="public"/>
+        <Method name="setCargos" returnType="void" visibility="public">
+          <Argument type="List&lt;Cargo&gt;" name="cargos"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIndicadores" returnType="List&lt;IndicadorEvento&gt;" visibility="public"/>
+        <Method name="setIndicadores" returnType="void" visibility="public">
+          <Argument type="List&lt;IndicadorEvento&gt;" name="indicadores"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MarcaUnidadTransporte" package="com.snsplus.backend.model" visibility="public" xPosition="435.0" yPosition="6.0">
+      <Fields>
+        <Field name="unidadesTransporte" type="List&lt;UnidadTransporte&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getUnidadesTransporte" returnType="List&lt;UnidadTransporte&gt;" visibility="public"/>
+        <Method name="setUnidadesTransporte" returnType="void" visibility="public">
+          <Argument type="List&lt;UnidadTransporte&gt;" name="unidadesTransporte"/>
+        </Method>
+        <Method name="getFabricante" returnType="String" visibility="public"/>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EquipoSupervivencia" package="com.snsplus.backend.model" visibility="public" xPosition="28.0" yPosition="391.0">
+      <Fields>
+        <Field name="unidadesTransporte" type="List&lt;UnidadTransporte&gt;" visibility="private"/>
+        <Field name="vuelos" type="List&lt;Vuelo&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getVuelos" returnType="List&lt;Vuelo&gt;" visibility="public"/>
+        <Method name="setVuelos" returnType="void" visibility="public">
+          <Argument type="List&lt;Vuelo&gt;" name="vuelos"/>
+        </Method>
+        <Method name="getUnidadesTransporte" returnType="List&lt;UnidadTransporte&gt;" visibility="public"/>
+        <Method name="setUnidadesTransporte" returnType="void" visibility="public">
+          <Argument type="List&lt;UnidadTransporte&gt;" name="unidadesTransporte"/>
+        </Method>
+        <Method name="getEquipo" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IndicadorEvento" package="com.snsplus.backend.model" visibility="public" xPosition="1292.0" yPosition="1271.0">
+      <Fields>
+        <Field name="padre" type="Evento" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="Evento" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="Evento" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="com.snsplus.backend.model" visibility="public" xPosition="1463.0" yPosition="314.0">
+      <Fields>
+        <Field name="tripulacion" type="List&lt;Tripulante&gt;" visibility="private"/>
+        <Field name="cargo" type="Cargo" visibility="private"/>
+        <Field name="empresa" type="Empresa" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getEstatus" returnType="EstatusPersona" visibility="public"/>
+        <Method name="getEmpresa" returnType="Empresa" visibility="public"/>
+        <Method name="setEmpresa" returnType="void" visibility="public">
+          <Argument type="Empresa" name="empresa"/>
+        </Method>
+        <Method name="getEmailCorporativo" returnType="String" visibility="public"/>
+        <Method name="getEmailPersonal" returnType="String" visibility="public"/>
+        <Method name="getTelefonoHabitacion" returnType="String" visibility="public"/>
+        <Method name="getTelefonoMovil" returnType="String" visibility="public"/>
+        <Method name="getDireccionHabitacion" returnType="String" visibility="public"/>
+        <Method name="getNacionalidad" returnType="Nacionalidad" visibility="public"/>
+        <Method name="getDocumentoIdentidad" returnType="String" visibility="public"/>
+        <Method name="getSegundoApellido" returnType="String" visibility="public"/>
+        <Method name="getPrimerApellido" returnType="String" visibility="public"/>
+        <Method name="getSegundoNombre" returnType="String" visibility="public"/>
+        <Method name="getPrimerNombre" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getCargo" returnType="Cargo" visibility="public"/>
+        <Method name="setCargo" returnType="void" visibility="public">
+          <Argument type="Cargo" name="cargo"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getTripulacion" returnType="List&lt;Tripulante&gt;" visibility="public"/>
+        <Method name="setTripulacion" returnType="void" visibility="public">
+          <Argument type="List&lt;Tripulante&gt;" name="tripulacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ValorIndicadorEvento" package="com.snsplus.backend.model" visibility="public" xPosition="966.0" yPosition="1138.0">
+      <Fields>
+        <Field name="padre" type="EventoOperacion" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="EventoOperacion" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="EventoOperacion" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FaseOperacionVuelo" package="com.snsplus.backend.model" visibility="public" xPosition="149.0" yPosition="769.0">
+      <Fields>
+        <Field name="padre" type="Vuelo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="Vuelo" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="Vuelo" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Terminal" package="com.snsplus.backend.model" visibility="public" xPosition="483.0" yPosition="314.0">
+      <Fields>
+        <Field name="alternativos" type="List&lt;Ruta&gt;" visibility="private"/>
+        <Field name="llegadas" type="List&lt;Ruta&gt;" visibility="private"/>
+        <Field name="salidas" type="List&lt;Ruta&gt;" visibility="private"/>
+        <Field name="ciudad" type="Ciudad" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="TerminalDTO" name="terminalDTO"/>
+          <Argument type="Boolean" name="deep"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCiudad" returnType="Ciudad" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="Ciudad" name="ciudad"/>
+        </Method>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getSalidas" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setSalidas" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="salidas"/>
+        </Method>
+        <Method name="getLlegadas" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setLlegadas" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="llegadas"/>
+        </Method>
+        <Method name="getAlternativos" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setAlternativos" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="alternativos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tripulante" package="com.snsplus.backend.model" visibility="public" xPosition="1021.0" yPosition="373.0">
+      <Fields>
+        <Field name="cargo" type="Cargo" visibility="private"/>
+        <Field name="persona" type="Persona" visibility="private"/>
+        <Field name="ruta" type="Ruta" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCargo" returnType="Cargo" visibility="public"/>
+        <Method name="setCargo" returnType="void" visibility="public">
+          <Argument type="Cargo" name="cargo"/>
+        </Method>
+        <Method name="getPersona" returnType="Persona" visibility="public"/>
+        <Method name="setPersona" returnType="void" visibility="public">
+          <Argument type="Persona" name="persona"/>
+        </Method>
+        <Method name="getRuta" returnType="Ruta" visibility="public"/>
+        <Method name="setRuta" returnType="void" visibility="public">
+          <Argument type="Ruta" name="ruta"/>
+        </Method>
+        <Method name="isResponsable" returnType="Boolean" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Empresa" package="com.snsplus.backend.model" visibility="public" xPosition="1188.0" yPosition="20.0">
+      <Fields>
+        <Field name="rutas" type="List&lt;Ruta&gt;" visibility="private"/>
+        <Field name="unidadesTransporte" type="List&lt;UnidadTransporte&gt;" visibility="private"/>
+        <Field name="personas" type="List&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getDireccionPrincipal" returnType="String" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getRif" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getPersonas" returnType="List&lt;Persona&gt;" visibility="public"/>
+        <Method name="setPersonas" returnType="void" visibility="public">
+          <Argument type="List&lt;Persona&gt;" name="personas"/>
+        </Method>
+        <Method name="getUnidadesTransporte" returnType="List&lt;UnidadTransporte&gt;" visibility="public"/>
+        <Method name="setUnidadesTransporte" returnType="void" visibility="public">
+          <Argument type="List&lt;UnidadTransporte&gt;" name="unidadesTransporte"/>
+        </Method>
+        <Method name="getRutas" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setRutas" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="rutas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TripulanteVuelo" package="com.snsplus.backend.model" visibility="public" xPosition="1110.0" yPosition="582.0">
+      <Fields>
+        <Field name="vuelo" type="Vuelo" visibility="private"/>
+        <Field name="persona" type="Persona" visibility="private"/>
+        <Field name="cargo" type="Cargo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getVuelo" returnType="Vuelo" visibility="public"/>
+        <Method name="setVuelo" returnType="void" visibility="public">
+          <Argument type="Vuelo" name="vuelo"/>
+        </Method>
+        <Method name="getPersona" returnType="Persona" visibility="public"/>
+        <Method name="setPersona" returnType="void" visibility="public">
+          <Argument type="Persona" name="persona"/>
+        </Method>
+        <Method name="getCargo" returnType="Cargo" visibility="public"/>
+        <Method name="setCargo" returnType="void" visibility="public">
+          <Argument type="Cargo" name="cargo"/>
+        </Method>
+        <Method name="isResponsable" returnType="Boolean" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IndicadorFase" package="com.snsplus.backend.model" visibility="public" xPosition="840.0" yPosition="951.0">
+      <Fields>
+        <Field name="padre" type="Fase" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="Fase" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="Fase" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ValorIndicador" package="com.snsplus.backend.model" visibility="public" xPosition="999.0" yPosition="1292.0">
+      <Fields>
+        <Field name="indicador" type="Indicador" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getTipoPadre" returnType="TipoPadreIndicador" visibility="public"/>
+        <Method name="getIndicador" returnType="Indicador" visibility="public"/>
+        <Method name="setIndicador" returnType="void" visibility="public">
+          <Argument type="Indicador" name="Indicador"/>
+        </Method>
+        <Method name="getValor" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UnidadTransporte" package="com.snsplus.backend.model" visibility="public" xPosition="478.0" yPosition="176.0">
+      <Fields>
+        <Field name="rutas" type="List&lt;Ruta&gt;" visibility="private"/>
+        <Field name="equiposSupervivencia" type="List&lt;EquipoSupervivencia&gt;" visibility="private"/>
+        <Field name="marcaUnidadTransporte" type="MarcaUnidadTransporte" visibility="private"/>
+        <Field name="modeloUnidadTransporte" type="ModeloUnidadTransporte" visibility="private"/>
+        <Field name="tipoUnidadTransporte" type="TipoUnidadTransporte" visibility="private"/>
+        <Field name="empresa" type="Empresa" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPropietario" returnType="String" visibility="public"/>
+        <Method name="getVencimientoCertificado" returnType="Date" visibility="public"/>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="getKilosPermitidos" returnType="Double" visibility="public"/>
+        <Method name="getCantidadPasajerosPermitidos" returnType="int" visibility="public"/>
+        <Method name="getSerial" returnType="String" visibility="public"/>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getTipoUnidadTransporte" returnType="TipoUnidadTransporte" visibility="public"/>
+        <Method name="setTipoUnidadTransporte" returnType="void" visibility="public">
+          <Argument type="TipoUnidadTransporte" name="tipoUnidadTransporte"/>
+        </Method>
+        <Method name="getModeloUnidadTransporte" returnType="ModeloUnidadTransporte" visibility="public"/>
+        <Method name="setModeloUnidadTransporte" returnType="void" visibility="public">
+          <Argument type="ModeloUnidadTransporte" name="modeloUnidadTransporte"/>
+        </Method>
+        <Method name="getMarcaUnidadTransporte" returnType="MarcaUnidadTransporte" visibility="public"/>
+        <Method name="setMarcaUnidadTransporte" returnType="void" visibility="public">
+          <Argument type="MarcaUnidadTransporte" name="marcaUnidadTransporte"/>
+        </Method>
+        <Method name="getEmpresa" returnType="Empresa" visibility="public"/>
+        <Method name="setEmpresa" returnType="void" visibility="public">
+          <Argument type="Empresa" name="empresa"/>
+        </Method>
+        <Method name="getEquiposSupervivencia" returnType="List&lt;EquipoSupervivencia&gt;" visibility="public"/>
+        <Method name="setEquiposSupervivencia" returnType="void" visibility="public">
+          <Argument type="List&lt;EquipoSupervivencia&gt;" name="equiposSupervivencia"/>
+        </Method>
+        <Method name="getRutas" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setRutas" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="rutas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TipoUnidadTransporte" package="com.snsplus.backend.model" visibility="public" xPosition="46.0" yPosition="199.0">
+      <Fields>
+        <Field name="unidadesTransporte" type="List&lt;UnidadTransporte&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getUnidadesTransporte" returnType="List&lt;UnidadTransporte&gt;" visibility="public"/>
+        <Method name="setUnidadesTransporte" returnType="void" visibility="public">
+          <Argument type="List&lt;UnidadTransporte&gt;" name="unidadesTransporte"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EventoOperacionVuelo" package="com.snsplus.backend.model" visibility="public" xPosition="978.0" yPosition="715.0">
+      <Fields>
+        <Field name="padre" type="Vuelo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPadre" returnType="Vuelo" visibility="public"/>
+        <Method name="setPadre" returnType="void" visibility="public">
+          <Argument type="Vuelo" name="padre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Operacion" package="com.snsplus.backend.model" visibility="public" xPosition="457.0" yPosition="1348.0">
+      <Fields>
+        <Field name="eventos" type="List&lt;Evento&gt;" visibility="private"/>
+        <Field name="fases" type="List&lt;Fase&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getEstatus" returnType="EstatusOperacion" visibility="public"/>
+        <Method name="getTipo" returnType="TipoOperacion" visibility="public"/>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getFases" returnType="List&lt;Fase&gt;" visibility="public"/>
+        <Method name="setFases" returnType="void" visibility="public">
+          <Argument type="List&lt;Fase&gt;" name="fases"/>
+        </Method>
+        <Method name="getEventos" returnType="List&lt;Evento&gt;" visibility="public"/>
+        <Method name="setEventos" returnType="void" visibility="public">
+          <Argument type="List&lt;Evento&gt;" name="eventos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cargo" package="com.snsplus.backend.model" visibility="public" xPosition="1601.0" yPosition="671.0">
+      <Fields>
+        <Field name="eventos" type="List&lt;Evento&gt;" visibility="private"/>
+        <Field name="fases" type="List&lt;Fase&gt;" visibility="private"/>
+        <Field name="personas" type="List&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPersonas" returnType="List&lt;Persona&gt;" visibility="public"/>
+        <Method name="setPersonas" returnType="void" visibility="public">
+          <Argument type="List&lt;Persona&gt;" name="personas"/>
+        </Method>
+        <Method name="getCargo" returnType="String" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getFases" returnType="List&lt;Fase&gt;" visibility="public"/>
+        <Method name="setFases" returnType="void" visibility="public">
+          <Argument type="List&lt;Fase&gt;" name="fases"/>
+        </Method>
+        <Method name="getEventos" returnType="List&lt;Evento&gt;" visibility="public"/>
+        <Method name="setEventos" returnType="void" visibility="public">
+          <Argument type="List&lt;Evento&gt;" name="eventos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Indicador" package="com.snsplus.backend.model" visibility="public" xPosition="1292.0" yPosition="1072.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDecimalesPermitidos" returnType="int" visibility="public"/>
+        <Method name="getCaracteresPermitidos" returnType="int" visibility="public"/>
+        <Method name="isObligatorio" returnType="Boolean" visibility="public"/>
+        <Method name="getTipoDato" returnType="TipoDato" visibility="public"/>
+        <Method name="getTipoIndicador" returnType="TipoIndicador" visibility="public"/>
+        <Method name="getCodigo" returnType="String" visibility="public"/>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FaseOperacion" package="com.snsplus.backend.model" visibility="public" xPosition="128.0" yPosition="995.0">
+      <Fields>
+        <Field name="valoresIndicador" type="List&lt;ValorIndicadorFase&gt;" visibility="private"/>
+        <Field name="fase" type="Fase" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getFase" returnType="Fase" visibility="public"/>
+        <Method name="setFase" returnType="void" visibility="public">
+          <Argument type="Fase" name="fase"/>
+        </Method>
+        <Method name="getEstatus" returnType="EstatusFaseEvento" visibility="public"/>
+        <Method name="getTipoPadre" returnType="TipoOperacion" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getValoresIndicador" returnType="List&lt;ValorIndicadorFase&gt;" visibility="public"/>
+        <Method name="setValoresIndicador" returnType="void" visibility="public">
+          <Argument type="List&lt;ValorIndicadorFase&gt;" name="valoresIndicador"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pais" package="com.snsplus.backend.model" visibility="public" xPosition="504.0" yPosition="552.0">
+      <Fields>
+        <Field name="estados" type="List&lt;Estado&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="PaisDTO" name="paisDTO"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getPais" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getEstados" returnType="List&lt;Estado&gt;" visibility="public"/>
+        <Method name="setEstados" returnType="void" visibility="public">
+          <Argument type="List&lt;Estado&gt;" name="estados"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estado" package="com.snsplus.backend.model" visibility="public" xPosition="595.0" yPosition="409.0">
+      <Fields>
+        <Field name="ciudades" type="List&lt;Ciudad&gt;" visibility="private"/>
+        <Field name="pais" type="Pais" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="EstadoDTO" name="estadoDTO"/>
+          <Argument type="Boolean" name="deep"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPais" returnType="Pais" visibility="public"/>
+        <Method name="setPais" returnType="void" visibility="public">
+          <Argument type="Pais" name="pais"/>
+        </Method>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getCiudades" returnType="List&lt;Ciudad&gt;" visibility="public"/>
+        <Method name="setCiudades" returnType="void" visibility="public">
+          <Argument type="List&lt;Ciudad&gt;" name="ciudades"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EventoOperacion" package="com.snsplus.backend.model" visibility="public" xPosition="1302.0" yPosition="817.0">
+      <Fields>
+        <Field name="valorIndicadorEventos" type="List&lt;ValorIndicadorEvento&gt;" visibility="private"/>
+        <Field name="evento" type="Evento" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getEvento" returnType="Evento" visibility="public"/>
+        <Method name="setEvento" returnType="void" visibility="public">
+          <Argument type="Evento" name="evento"/>
+        </Method>
+        <Method name="getEstatus" returnType="EstatusFaseEvento" visibility="public"/>
+        <Method name="getTipoPadre" returnType="TipoOperacion" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getValorIndicadorEventos" returnType="List&lt;ValorIndicadorEvento&gt;" visibility="public"/>
+        <Method name="setValorIndicadorEventos" returnType="void" visibility="public">
+          <Argument type="List&lt;ValorIndicadorEvento&gt;" name="valorIndicadorEventos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vuelo" package="com.snsplus.backend.model" visibility="public" xPosition="560.0" yPosition="725.0">
+      <Fields>
+        <Field name="eventosOperacion" type="List&lt;EventoOperacionVuelo&gt;" visibility="private"/>
+        <Field name="fases" type="List&lt;FaseOperacionVuelo&gt;" visibility="private"/>
+        <Field name="tripulacionVuelo" type="List&lt;TripulanteVuelo&gt;" visibility="private"/>
+        <Field name="equiposSupervivencia" type="List&lt;EquipoSupervivencia&gt;" visibility="private"/>
+        <Field name="ruta" type="Ruta" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRuta" returnType="Ruta" visibility="public"/>
+        <Method name="setRuta" returnType="void" visibility="public">
+          <Argument type="Ruta" name="ruta"/>
+        </Method>
+        <Method name="getFecha" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getEquiposSupervivencia" returnType="List&lt;EquipoSupervivencia&gt;" visibility="public"/>
+        <Method name="setEquiposSupervivencia" returnType="void" visibility="public">
+          <Argument type="List&lt;EquipoSupervivencia&gt;" name="equiposSupervivencia"/>
+        </Method>
+        <Method name="getTripulacionVuelo" returnType="List&lt;TripulanteVuelo&gt;" visibility="public"/>
+        <Method name="setTripulacionVuelo" returnType="void" visibility="public">
+          <Argument type="List&lt;TripulanteVuelo&gt;" name="tripulacionVuelo"/>
+        </Method>
+        <Method name="getFases" returnType="List&lt;FaseOperacionVuelo&gt;" visibility="public"/>
+        <Method name="setFases" returnType="void" visibility="public">
+          <Argument type="List&lt;FaseOperacionVuelo&gt;" name="fases"/>
+        </Method>
+        <Method name="getEventosOperacion" returnType="List&lt;EventoOperacionVuelo&gt;" visibility="public"/>
+        <Method name="setEventosOperacion" returnType="void" visibility="public">
+          <Argument type="List&lt;EventoOperacionVuelo&gt;" name="eventosOperacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ciudad" package="com.snsplus.backend.model" visibility="public" xPosition="320.0" yPosition="450.0">
+      <Fields>
+        <Field name="terminales" type="List&lt;Terminal&gt;" visibility="private"/>
+        <Field name="estado" type="Estado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="CiudadDTO" name="ciudadDTO"/>
+          <Argument type="Boolean" name="deep"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEstado" returnType="Estado" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="Estado" name="estado"/>
+        </Method>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getTerminales" returnType="List&lt;Terminal&gt;" visibility="public"/>
+        <Method name="setTerminales" returnType="void" visibility="public">
+          <Argument type="List&lt;Terminal&gt;" name="terminales"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ModeloUnidadTransporte" package="com.snsplus.backend.model" visibility="public" xPosition="46.0" yPosition="64.0">
+      <Fields>
+        <Field name="unidadesTransporte" type="List&lt;UnidadTransporte&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getUnidadesTransporte" returnType="List&lt;UnidadTransporte&gt;" visibility="public"/>
+        <Method name="setUnidadesTransporte" returnType="void" visibility="public">
+          <Argument type="List&lt;UnidadTransporte&gt;" name="unidadesTransporte"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fase" package="com.snsplus.backend.model" visibility="public" xPosition="545.0" yPosition="894.0">
+      <Fields>
+        <Field name="indicadores" type="List&lt;IndicadorFase&gt;" visibility="private"/>
+        <Field name="cargos" type="List&lt;Cargo&gt;" visibility="private"/>
+        <Field name="operacion" type="Operacion" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCargos" returnType="List&lt;Cargo&gt;" visibility="public"/>
+        <Method name="setCargos" returnType="void" visibility="public">
+          <Argument type="List&lt;Cargo&gt;" name="cargos"/>
+        </Method>
+        <Method name="getOperacion" returnType="Operacion" visibility="public"/>
+        <Method name="setOperacion" returnType="void" visibility="public">
+          <Argument type="Operacion" name="operacion"/>
+        </Method>
+        <Method name="getOrden" returnType="int" visibility="public"/>
+        <Method name="getTipo" returnType="TipoFase" visibility="public"/>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIndicadores" returnType="List&lt;IndicadorFase&gt;" visibility="public"/>
+        <Method name="setIndicadores" returnType="void" visibility="public">
+          <Argument type="List&lt;IndicadorFase&gt;" name="indicadores"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ruta" package="com.snsplus.backend.model" visibility="public" xPosition="776.0" yPosition="296.0">
+      <Fields>
+        <Field name="vuelos" type="List&lt;Vuelo&gt;" visibility="private"/>
+        <Field name="tripulacion" type="List&lt;Tripulante&gt;" visibility="private"/>
+        <Field name="empresa" type="Empresa" visibility="private"/>
+        <Field name="unidadTransporte" type="UnidadTransporte" visibility="private"/>
+        <Field name="terminalOrigen" type="Terminal" visibility="private"/>
+        <Field name="terminalDestino" type="Terminal" visibility="private"/>
+        <Field name="terminalAlternativo" type="Terminal" visibility="private"/>
+        <Field name="tipoRuta" type="TipoRuta" visibility="private"/>
+        <Field name="dias" type="List&lt;ItinerarioRuta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getEmpresa" returnType="Empresa" visibility="public"/>
+        <Method name="setEmpresa" returnType="void" visibility="public">
+          <Argument type="Empresa" name="empresa"/>
+        </Method>
+        <Method name="getUnidadTransporte" returnType="UnidadTransporte" visibility="public"/>
+        <Method name="setUnidadTransporte" returnType="void" visibility="public">
+          <Argument type="UnidadTransporte" name="unidadTransporte"/>
+        </Method>
+        <Method name="getTerminalOrigen" returnType="Terminal" visibility="public"/>
+        <Method name="setTerminalOrigen" returnType="void" visibility="public">
+          <Argument type="Terminal" name="terminalOrigen"/>
+        </Method>
+        <Method name="getTerminalDestino" returnType="Terminal" visibility="public"/>
+        <Method name="setTerminalDestino" returnType="void" visibility="public">
+          <Argument type="Terminal" name="terminalDestino"/>
+        </Method>
+        <Method name="getTerminalAlternativo" returnType="Terminal" visibility="public"/>
+        <Method name="setTerminalAlternativo" returnType="void" visibility="public">
+          <Argument type="Terminal" name="terminalAlternativo"/>
+        </Method>
+        <Method name="getTipoRuta" returnType="TipoRuta" visibility="public"/>
+        <Method name="setTipoRuta" returnType="void" visibility="public">
+          <Argument type="TipoRuta" name="tipoRuta"/>
+        </Method>
+        <Method name="getDias" returnType="List&lt;ItinerarioRuta&gt;" visibility="public"/>
+        <Method name="setDias" returnType="void" visibility="public">
+          <Argument type="List&lt;ItinerarioRuta&gt;" name="dias"/>
+        </Method>
+        <Method name="getEstatus" returnType="EstatusRuta" visibility="public"/>
+        <Method name="getTiempoRuta" returnType="Time" visibility="public"/>
+        <Method name="getHoraSalida" returnType="Time" visibility="public"/>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="getCodigoRuta" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getTripulacion" returnType="List&lt;Tripulante&gt;" visibility="public"/>
+        <Method name="setTripulacion" returnType="void" visibility="public">
+          <Argument type="List&lt;Tripulante&gt;" name="tripulacion"/>
+        </Method>
+        <Method name="getVuelos" returnType="List&lt;Vuelo&gt;" visibility="public"/>
+        <Method name="setVuelos" returnType="void" visibility="public">
+          <Argument type="List&lt;Vuelo&gt;" name="vuelos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TipoRuta" package="com.snsplus.backend.model" visibility="public" xPosition="840.0" yPosition="486.0">
+      <Fields>
+        <Field name="rutas" type="List&lt;Ruta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAbreviatura" returnType="String" visibility="public"/>
+        <Method name="getTipoRuta" returnType="String" visibility="public"/>
+        <Method name="getFechaModificacion" returnType="Calendar" visibility="public"/>
+        <Method name="getFechaRegistro" returnType="Calendar" visibility="public"/>
+        <Method name="getVersion" returnType="Integer" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getRutas" returnType="List&lt;Ruta&gt;" visibility="public"/>
+        <Method name="setRutas" returnType="void" visibility="public">
+          <Argument type="List&lt;Ruta&gt;" name="rutas"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.snsplus.backend.model.EventoOperacionVuelo" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.EventoOperacion" target="com.snsplus.backend.model.Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.ValorIndicador" target="com.snsplus.backend.model.Indicador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estado" source="com.snsplus.backend.model.Ciudad" target="com.snsplus.backend.model.Estado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="indicadores" source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Indicador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;IndicadorEvento&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.ValorIndicadorEvento" target="com.snsplus.backend.model.EventoOperacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.EventoOperacion" target="com.snsplus.backend.model.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cargos" source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Cargo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cargo&gt;"/>
+    <HasRelation name="terminales" source="com.snsplus.backend.model.Ciudad" target="com.snsplus.backend.model.Terminal" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Terminal&gt;"/>
+    <HasRelation name="equiposSupervivencia" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.EquipoSupervivencia" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;EquipoSupervivencia&gt;"/>
+    <HasRelation name="tripulacion" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Tripulante" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Tripulante&gt;"/>
+    <HasRelation name="rutas" source="com.snsplus.backend.model.TipoRuta" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.FaseOperacion" target="com.snsplus.backend.model.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.ModeloUnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.EventoOperacionVuelo" target="com.snsplus.backend.model.EventoOperacion"/>
+    <HasRelation name="unidadesTransporte" source="com.snsplus.backend.model.MarcaUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;UnidadTransporte&gt;"/>
+    <HasRelation name="tipoUnidadTransporte" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.TipoUnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cargo" source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Cargo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pais" source="com.snsplus.backend.model.Estado" target="com.snsplus.backend.model.Pais" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="indicador" source="com.snsplus.backend.model.ValorIndicador" target="com.snsplus.backend.model.Indicador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Empresa" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.ValorIndicadorEvento" target="com.snsplus.backend.model.ValorIndicador"/>
+    <UseRelation source="com.snsplus.backend.model.Ciudad" target="com.snsplus.backend.model.Estado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="indicadores" source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;IndicadorFase&gt;"/>
+    <HasRelation name="dias" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItinerarioRuta&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.IndicadorEvento" target="com.snsplus.backend.model.Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ciudad" target="com.snsplus.backend.model.Terminal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="unidadTransporte" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Cargo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Indicador" target="com.snsplus.backend.model.Indicador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Estado" target="com.snsplus.backend.model.Pais" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="eventos" source="com.snsplus.backend.model.Operacion" target="com.snsplus.backend.model.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Evento&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Pais" target="com.snsplus.backend.model.Estado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tripulacion" source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Tripulante" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Tripulante&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Terminal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.ItinerarioRuta" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="unidadesTransporte" source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;UnidadTransporte&gt;"/>
+    <HasRelation name="persona" source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Tripulante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.IndicadorFase" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.EquipoSupervivencia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tripulacionVuelo" source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;TripulanteVuelo&gt;"/>
+    <HasRelation name="unidadesTransporte" source="com.snsplus.backend.model.ModeloUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;UnidadTransporte&gt;"/>
+    <HasRelation name="eventosOperacion" source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;EventoOperacionVuelo&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.EquipoSupervivencia" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="valorIndicadorEventos" source="com.snsplus.backend.model.EventoOperacion" target="com.snsplus.backend.model.Indicador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ValorIndicadorEvento&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.MarcaUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="personas" source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Persona&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Cargo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fase" source="com.snsplus.backend.model.FaseOperacion" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.ValorIndicadorFase" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ciudades" source="com.snsplus.backend.model.Estado" target="com.snsplus.backend.model.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ciudad&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Operacion" target="com.snsplus.backend.model.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.TipoUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="marcaUnidadTransporte" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="operacion" source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Operacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.EquipoSupervivencia" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="empresa" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Empresa" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Cargo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="unidadesTransporte" source="com.snsplus.backend.model.TipoUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;UnidadTransporte&gt;"/>
+    <HasRelation name="rutas" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.ValorIndicadorFase" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estados" source="com.snsplus.backend.model.Pais" target="com.snsplus.backend.model.Estado" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Estado&gt;"/>
+    <HasRelation name="ruta" source="com.snsplus.backend.model.ItinerarioRuta" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.TipoUnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="valoresIndicador" source="com.snsplus.backend.model.FaseOperacion" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ValorIndicadorFase&gt;"/>
+    <HasRelation name="terminalOrigen" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Terminal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ruta" source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vuelos" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Vuelo&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Tripulante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="terminalAlternativo" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Terminal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.IndicadorEvento" target="com.snsplus.backend.model.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Cargo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fases" source="com.snsplus.backend.model.Operacion" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Fase&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cargo" source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Cargo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persona" source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.TipoRuta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="unidadesTransporte" source="com.snsplus.backend.model.EquipoSupervivencia" target="com.snsplus.backend.model.UnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;UnidadTransporte&gt;"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.IndicadorEvento" target="com.snsplus.backend.model.Indicador"/>
+    <UseRelation source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Cargo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Estado" target="com.snsplus.backend.model.Ciudad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="operacion" source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Operacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.FaseOperacionVuelo" target="com.snsplus.backend.model.FaseOperacion"/>
+    <HasRelation name="rutas" source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.IndicadorFase" target="com.snsplus.backend.model.Indicador"/>
+    <HasRelation name="empresa" source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Empresa" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ciudad" source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Indicador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.FaseOperacionVuelo" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.EventoOperacion" target="com.snsplus.backend.model.Indicador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Operacion" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cargo" source="com.snsplus.backend.model.Tripulante" target="com.snsplus.backend.model.Cargo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Operacion" target="com.snsplus.backend.model.Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.ModeloUnidadTransporte" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ruta" source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="salidas" source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.EventoOperacionVuelo" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="padre" source="com.snsplus.backend.model.ValorIndicadorEvento" target="com.snsplus.backend.model.EventoOperacion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.snsplus.backend.model.ValorIndicadorFase" target="com.snsplus.backend.model.ValorIndicador"/>
+    <HasRelation name="tipoRuta" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.TipoRuta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="modeloUnidadTransporte" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.ModeloUnidadTransporte" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.IndicadorFase" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="equiposSupervivencia" source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.EquipoSupervivencia" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;EquipoSupervivencia&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ciudad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.UnidadTransporte" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="llegadas" source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+    <HasRelation name="eventos" source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Evento&gt;"/>
+    <HasRelation name="personas" source="com.snsplus.backend.model.Empresa" target="com.snsplus.backend.model.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Persona&gt;"/>
+    <HasRelation name="fases" source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Fase&gt;"/>
+    <HasRelation name="empresa" source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.Empresa" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vuelos" source="com.snsplus.backend.model.EquipoSupervivencia" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Vuelo&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.FaseOperacionVuelo" target="com.snsplus.backend.model.Vuelo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.Empresa" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.FaseOperacion" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="terminalDestino" source="com.snsplus.backend.model.Ruta" target="com.snsplus.backend.model.Terminal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cargos" source="com.snsplus.backend.model.Fase" target="com.snsplus.backend.model.Cargo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cargo&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.Evento" target="com.snsplus.backend.model.Operacion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fases" source="com.snsplus.backend.model.Vuelo" target="com.snsplus.backend.model.Fase" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;FaseOperacionVuelo&gt;"/>
+    <UseRelation source="com.snsplus.backend.model.TipoRuta" target="com.snsplus.backend.model.Ruta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Cargo" target="com.snsplus.backend.model.Fase" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vuelo" source="com.snsplus.backend.model.TripulanteVuelo" target="com.snsplus.backend.model.Vuelo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="evento" source="com.snsplus.backend.model.EventoOperacion" target="com.snsplus.backend.model.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.UnidadTransporte" target="com.snsplus.backend.model.EquipoSupervivencia" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.snsplus.backend.model.Persona" target="com.snsplus.backend.model.Empresa" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="alternativos" source="com.snsplus.backend.model.Terminal" target="com.snsplus.backend.model.Ruta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ruta&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

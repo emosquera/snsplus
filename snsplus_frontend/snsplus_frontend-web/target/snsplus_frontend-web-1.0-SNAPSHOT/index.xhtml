@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/indexTemplate.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="content">
+        <p:panelGrid>
+            <p:row>
+                <p:column>
+                    <p:outputLabel value="#{indexViewBean.pais.pais} (#{indexViewBean.pais.abreviatura})"/>        
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <p:selectOneMenu value="#{indexViewBean.estado}" converter="estadoConverter">
+                        <f:selectItem itemLabel="Seleccione un Estado" itemValue=""/>
+                        <f:selectItems value="#{indexViewBean.pais.estadoDTOs}" var="estadoSel" itemLabel="#{estadoSel.estado}" itemValue="#{estadoSel}"/>
+                        <p:ajax event="change" update="comboCiudad comboTerminal"/>
+                    </p:selectOneMenu>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <p:selectOneMenu id="comboCiudad" value="#{indexViewBean.ciudad}" converter="ciudadConverter">
+                        <f:selectItem itemLabel="Seleccione una Ciudad" itemValue=""/>
+                        <f:selectItems value="#{indexViewBean.estado.ciudadDTOs}" var="ciudadSel" itemLabel="#{ciudadSel.ciudad}" itemValue="#{ciudadSel}"/>
+                        <p:ajax event="change" update="comboTerminal"/>
+                    </p:selectOneMenu>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <p:selectOneMenu id="comboTerminal" value="#{indexViewBean.terminal}" converter="terminalConverter">
+                        <f:selectItem itemLabel="Seleccione un Terminal" itemValue=""/>
+                        <f:selectItems value="#{indexViewBean.ciudad.terminalDTOs}" var="terminalSel" itemLabel="#{terminalSel.nombre}" itemValue="#{terminalSel}"/>
+                    </p:selectOneMenu>
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+    </ui:define>
+</ui:composition>

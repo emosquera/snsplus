@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/indexTemplate.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:define name="content">
+        <div style="text-align: center; width: 100%;">
+            <h:outputLabel style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: x-large; font-weight: bolder">
+                #{pruebaViewBean.fechaFormateada}
+            </h:outputLabel>
+        </div>
+        <p:dataGrid value="#{datosPrueba.vuelos}" var="vuelo" columns="4">
+            <p:commandLink style="text-decoration: none" action="/configuracionVuelo.xhtml?faces-redirect=true" actionListener="#{indexPruebaRequestBean.setVueloSeleccionado(vuelo)}">                
+                <div style="border: none; border-radius: 5px; background: #D8D8D8; margin: 10px 10px 10px 10px; width: 250px;">                    
+                    <div style ="background: #848484; border-radius: 5px 5px 0px 0px; text-align: center; padding: 10px;">
+                        <h:outputLabel style="color: white; font-size: x-large; font-weight: bolder">
+                            Vuelo #{vuelo.rutaDTO.descripcion}
+                        </h:outputLabel>
+                    </div>
+                    <div style="text-align: center; padding-bottom: 10px; padding-top: 10px;">
+                        <h:outputLabel style="color: #2E2E2E; font-weight: bold">
+                            #{vuelo.rutaDTO.terminalOrigenDTO.ciudadDTO.abreviatura} - #{vuelo.rutaDTO.terminalDestinoDTO.ciudadDTO.abreviatura}
+                        </h:outputLabel>
+                    </div>
+                    <div style="text-align: center; padding-bottom: 10px;">
+                        <h:outputLabel id="hora" value="#{vuelo.rutaDTO.horaSalida}" style="color: #2E2E2E">
+                            <f:convertDateTime for="hora" pattern="KK:mm aa" />                            
+                        </h:outputLabel>
+                    </div>
+                    <div style="background: #{vuelo.estatus=='FIN' ? '#610B0B' : (vuelo.estatus=='PRO' ? '#21610B' : '#0B0B61')}; opacity: 0.9; border-radius: 0px 0px 5px 5px; text-align: center; padding: 3px 0px 3px 0px;">
+                        <h:outputLabel style="color: #{vuelo.estatus=='FIN' ? '#FBEFEF' : (vuelo.estatus=='PRO' ? '#A9F5A9' : '#A9E2F3')}; font-size: smaller">
+                            #{vuelo.estatus=='FIN' ? 'Finalizado' : (vuelo.estatus=='PRO' ? 'Proceso' : 'Pendiente')}
+                        </h:outputLabel>
+                    </div>
+                </div>
+            </p:commandLink>
+        </p:dataGrid>        
+    </ui:define>
+</ui:composition>

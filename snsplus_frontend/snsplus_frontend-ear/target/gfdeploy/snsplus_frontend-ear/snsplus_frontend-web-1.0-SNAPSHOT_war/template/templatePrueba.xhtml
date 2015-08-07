@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <title>::SNSPlus::</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>            
+    </h:head>
+    <body style="margin: 0!important;">
+        <h:form id="form" style="margin: 0!important">
+            <div style="display: flex; height: 90%;">
+                <div id="menu" style="height: 100%; width: 20%;">
+                    <ui:insert name="menu">Menu</ui:insert>
+                </div>
+                <div id="content" style="height: 100%; width: 80%; overflow-y: scroll">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>                   
+            </div>
+            <div id="footer" style="height: 10%; width: 100%; background: #F2F2F2">
+                <ui:insert name="footer">Footer</ui:insert>
+            </div>
+        </h:form>
+    </body>
+</html>

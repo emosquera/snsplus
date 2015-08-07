@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <display-name>snsplus_backend-ear</display-name>
+  <module>
+    <ejb>snsplus_backend_sql-ejb-1.0-SNAPSHOT.jar</ejb>
+  </module>
+  <module>
+    <ejb>snsplus_backend-ejb-1.0-SNAPSHOT.jar</ejb>
+  </module>
+  <module>
+    <web>
+      <web-uri>snsplus_backend_restful-web-1.0-SNAPSHOT.war</web-uri>
+      <context-root>/snsplus_backend_restful-web</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

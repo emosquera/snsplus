@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/templatePrueba.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:define name="menu">
+        <p:menu style="height: 98%">
+            <p:menuitem value="Home" outcome="/indexPrueba"/>
+            <p:menuitem value="Configuración del Vuelo" outcome="/configuracionVuelo"/>
+            <p:menuitem value="Plan de Vuelo" outcome="/indexPrueba"/>
+            <p:menuitem value="Despegue" outcome="/indexPrueba"/>
+            <p:menuitem value="Aterrizaje" outcome="/indexPrueba"/>
+            <p:menuitem value="Cerrar Vuelo" outcome="/indexPrueba"/>
+        </p:menu>
+    </ui:define>
+    <ui:define name="content">
+        <div style="text-align: center; font-family: 'Comic Sans MS', cursive, sans-serif">
+            <h:outputLabel style="font-size: xx-large; font-weight: bolder">
+                Configuración de Vuelo
+            </h:outputLabel>
+        </div>        
+        <p:panelGrid>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Vuelo:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <h:outputLabel>
+                        #{vueloSessionBean.vuelo.rutaDTO.descripcion}
+                    </h:outputLabel>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Origen:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <h:outputLabel>
+                        #{vueloSessionBean.vuelo.rutaDTO.terminalOrigenDTO.ciudadDTO.ciudad} (#{vueloSessionBean.vuelo.rutaDTO.terminalOrigenDTO.ciudadDTO.abreviatura}) #{vueloSessionBean.vuelo.rutaDTO.terminalOrigenDTO.nombre}                        
+                    </h:outputLabel>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Destino:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <h:outputLabel>
+                        #{vueloSessionBean.vuelo.rutaDTO.terminalDestinoDTO.ciudadDTO.ciudad} (#{vueloSessionBean.vuelo.rutaDTO.terminalDestinoDTO.ciudadDTO.abreviatura}) #{vueloSessionBean.vuelo.rutaDTO.terminalDestinoDTO.nombre}
+                    </h:outputLabel>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Hora de Salida:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <h:outputLabel id="hora" value="#{vueloSessionBean.vuelo.rutaDTO.horaSalida}">
+                        <f:convertDateTime for="hora" pattern="KK:mm aa" />
+                    </h:outputLabel>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Hora de Llegada:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <h:outputLabel id="lleg" value="#{vueloSessionBean.horaLLegada}">
+                        <f:convertDateTime for="lleg" pattern="KK:mm aa" />
+                    </h:outputLabel>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Aeronave:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <div>
+                        <p:selectOneMenu value="#{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO}" converter="unidadTransporteConverter">
+                            <f:selectItems value="#{datosPrueba.aviones}" var="avion" itemLabel="#{avion.marcaUnidadTransporteDTO.descripcion} #{avion.modeloUnidadTransporteDTO.descripcion}" itemValue="#{avion}"/>
+                            <p:ajax event="change" update="datosAvion"/>
+                        </p:selectOneMenu>
+                    </div>
+                    <div>
+                        <p:panelGrid id="datosAvion">
+                            <p:row>
+                                <p:column>
+                                    <h:outputLabel>
+                                        Matricula:
+                                    </h:outputLabel>
+                                </p:column>
+                                <p:column>
+                                    <h:outputLabel>
+                                        #{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO.matricula}
+                                    </h:outputLabel>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <h:outputLabel>
+                                        Serial:
+                                    </h:outputLabel>
+                                </p:column>
+                                <p:column>
+                                    <h:outputLabel>
+                                        #{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO.serial}
+                                    </h:outputLabel>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <h:outputLabel>
+                                        Color:
+                                    </h:outputLabel>
+                                </p:column>
+                                <p:column>
+                                    <h:outputLabel>
+                                        #{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO.color}
+                                    </h:outputLabel>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <h:outputLabel>
+                                        Vencimiento de Certificado:
+                                    </h:outputLabel>
+                                </p:column>
+                                <p:column>
+                                    <h:outputLabel id="venc" value="#{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO.vencimientoCertificado}">
+                                        <f:convertDateTime for="venc" pattern="MMMM - yyyy" />
+                                    </h:outputLabel>
+                                </p:column>
+                            </p:row>
+                            <p:row>
+                                <p:column>
+                                    <h:outputLabel>
+                                        Equipos de Supervivencia:
+                                    </h:outputLabel>
+                                </p:column>
+                                <p:column>
+                                    <p:selectManyCheckbox id="grid" value="#{vueloSessionBean.vuelo.rutaDTO.unidadTransporteDTO.equipoSupervivenciaDTOs}" converter="equipoSupervivenciaConverter" layout="grid" columns="3">
+                                        <f:selectItems value="#{datosPrueba.equipos}" var="equipo" itemLabel="#{equipo.equipo}" itemValue="#{equipo}"/>
+                                    </p:selectManyCheckbox>
+                                </p:column>
+                            </p:row>
+                        </p:panelGrid>
+                    </div>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <h:outputLabel>
+                        Tripulación:
+                    </h:outputLabel>
+                </p:column>
+                <p:column>
+                    <p:dataTable value="#{vueloSessionBean.vuelo.tripulanteVueloDTOs}" var="tripulante" style="width: 70%">
+                        <p:column style="width: 30%">
+                            #{tripulante.cargoDTO.cargo}:
+                        </p:column>
+                        <p:column>
+                            <p:selectOneMenu value="#{tripulante.personaDTO}" converter="personaConverter">
+                                <f:selectItems value="#{tripulante.cargoDTO.personaDTOs}" var="persona" itemLabel="#{persona.primerNombre} #{persona.primerApellido}" itemValue="#{persona}"/>
+                            </p:selectOneMenu>
+                        </p:column>
+                    </p:dataTable>                                        
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+        <div style="text-align: center">
+            <p:commandButton value="Cerrar Fase">
+
+            </p:commandButton>
+        </div>
+    </ui:define>
+    <ui:define name="footer">
+        <div style="text-align: center; display: flex; font-family: 'Comic Sans MS', cursive, sans-serif">
+            <p:commandButton value="Reportar Condición Latente" style="margin: 10px auto; color: #DBA901;">
+
+            </p:commandButton>
+            <p:commandButton value="Reportar Incidente" style="margin: 10px auto; color: #DF3A01;">
+
+            </p:commandButton>
+            <p:commandButton value="Reportar Accidente" style="margin: 10px auto; color: #8A0808;">
+
+            </p:commandButton>            
+        </div>
+    </ui:define>
+</ui:composition>
